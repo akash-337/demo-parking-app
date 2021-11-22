@@ -1,0 +1,12 @@
+.text{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    color: #5A76FB;
+    display: none;
+}
+.active, .text {
+    display: table-column-group;
+}
