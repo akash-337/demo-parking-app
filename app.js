@@ -27,7 +27,7 @@ app.use(require("./router/auth"));
 const PORT = process.env.PORT || 5000;
 
 if(process.env.NODE_ENV == "production"){
-  app.use(express.static("parking.build"))
+  app.use(express.static("parking/build"))
 }
 
 app.listen(PORT, () => {
