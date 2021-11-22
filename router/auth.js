@@ -7,10 +7,6 @@ const bcrypt = require("bcrypt");
 const authenticate = require("../middleware/authenticate");
 require("../db/conn");
 
-router.get("/", (req, res) => {
-  res.send("Hello from router");
-});
-
 // User Registeration
 router.post("/register", async (req, res) => {
   //getting user register data from frontend
