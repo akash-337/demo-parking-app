@@ -105,7 +105,7 @@ const Signin = () => {
 
     const { email, password } = login;
 
-    const res = await fetch("http://localhost:5000/signin", {
+    const res = await fetch("/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
