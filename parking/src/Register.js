@@ -133,7 +133,7 @@ const Register = () => {
     e.preventDefault();
     const cookies = new Cookies();
     const { cars, vehicleNumber, vehicleName } = user;
-    const res = await fetch("http://localhost:5000/vehicleinfo", {
+    const res = await fetch("/vehicleinfo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
