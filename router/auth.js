@@ -107,7 +107,7 @@ router.post("/vehicleinfo", authenticate, async (req, res) => {
 });
 
 // authenticating user on Vehicle Register page(middleware)
-router.post("/vehicleRegister", authenticate, (req, res) => {
+router.post("/vehicleregister", authenticate, (req, res) => {
   console.log("hello about");
   res.send(req.rootUser);
 });

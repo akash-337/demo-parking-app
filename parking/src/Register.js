@@ -160,7 +160,7 @@ const Register = () => {
   const callRegisterPage = async () => {
     const cookies = new Cookies();
     try {
-      const res = await fetch("http://localhost:5000/vehicleRegister", {
+      const res = await fetch("/vehicleregister", {
         method: "POST",
         headers: {
           Accept: "application/json",
