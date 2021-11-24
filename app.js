@@ -28,6 +28,9 @@ const PORT = process.env.PORT || 5000;
 
 if(process.env.NODE_ENV == "production"){
   app.use(express.static("parking/build"))
+  app.get("/*", function(req, res) {
+    res.sendFile(path.join(__dirname, "./parking/build/index.html"));
+  });
 }
 
 app.listen(PORT, () => {
