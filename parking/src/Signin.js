@@ -126,39 +126,6 @@ const Signin = () => {
     }
   };
 
-  const [userdata,setUserdata] = useState({});
-
-  const callRegisterPage = async () => {
-    const cookies = new Cookies();
-    try {
-      const res = await fetch("/vehicleregister", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          jwtoken :cookies.get('jwtoken') 
-        }),
-      });
-      const data = await res.json();
-      setUserdata(data)
-      if (!res.status === 200) {
-        const error = new Error(res.error)
-        throw error;
-      }
-    } catch (error) {
-      console.log(error);
-      history.push("/search");
-    }
-  };
-
-  
-  useEffect(() => {
-    callRegisterPage();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const history = useHistory();
   return (
     <div style={css.body}>
