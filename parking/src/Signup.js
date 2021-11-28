@@ -109,7 +109,7 @@ const Signup = () => {
 
     const { username, email, phone, password, cpassword } = user;
 
-    const res = await fetch("/register", {
+    const res = await fetch("/app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Cookies from 'universal-cookie';
 
@@ -104,7 +103,7 @@ const Signin = () => {
   const loginUser = async (e) => {
     e.preventDefault();
     const { email, password } = login;
-    const res = await fetch("/signin", {
+    const res = await fetch("/app/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

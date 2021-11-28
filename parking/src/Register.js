@@ -133,7 +133,7 @@ const Register = () => {
     e.preventDefault();
     const cookies = new Cookies();
     const { cars, vehicleNumber, vehicleName } = user;
-    const res = await fetch("/vehicleinfo", {
+    const res = await fetch("/app/vehicleinfo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -160,7 +160,7 @@ const Register = () => {
   const callRegisterPage = async () => {
     const cookies = new Cookies();
     try {
-      const res = await fetch("/vehicleregister", {
+      const res = await fetch("/app/vehicleregister", {
         method: "POST",
         headers: {
           Accept: "application/json",
